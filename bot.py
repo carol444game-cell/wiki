@@ -1,5 +1,8 @@
 import os
-from telegram import Update, ChatAction
+# eski: from telegram import Update, ChatAction
+from telegram import Update
+from telegram.constants import ChatAction
+
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import wikipediaapi
 from deep_translator import GoogleTranslator
@@ -81,3 +84,4 @@ if __name__ == "__main__":
         url_path=BOT_TOKEN,
         webhook_url=WEBHOOK_URL
     )
+
