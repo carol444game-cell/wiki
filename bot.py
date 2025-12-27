@@ -1,8 +1,6 @@
 import os
-# eski: from telegram import Update, ChatAction
 from telegram import Update
 from telegram.constants import ChatAction
-
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import wikipediaapi
 from deep_translator import GoogleTranslator
@@ -24,7 +22,7 @@ wiki = wikipediaapi.Wikipedia('en', headers={'User-Agent': user_agent})
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """/start komandasi"""
+    """ /start komandasi """
     welcome_message = (
         "👋 Hello! I am your Wikipedia bot.\n\n"
         "Send me any topic and I will search it on Wikipedia.\n"
@@ -84,4 +82,3 @@ if __name__ == "__main__":
         url_path=BOT_TOKEN,
         webhook_url=WEBHOOK_URL
     )
-
